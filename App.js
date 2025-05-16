@@ -65,7 +65,9 @@ const App = () => {
     speak(response);
   }, []);
 
-  return (
+  return ( <button onClick={startListening} style={styles.listenButton}>
+  {listening ? "Listening..." : "Speak to HOPE"}
+</button>
     <div style={styles.container}>
       <div style={styles.hopeEye}>
         <div style={styles.eyeCenter}></div>
