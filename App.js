@@ -125,5 +125,32 @@ const styles = {
     cursor: 'pointer',
   },
 };
+const startListening = () => {
+  if (!('webkitSpeechRecognition' in window)) {
+    alert('Your browser does not support voice recognition.');
+    return;
+  }
 
+  const recognition = new window.webkitSpeechRecognition();
+  recognition.continuous = false;
+  recognition.interimResults = false;
+  recognition.lang = 'en-US';
+
+  setListening(true);
+  recognition.start();
+
+  recognition.onresult = (event) => {
+    const transcript = event.results[0][0].transcript;
+    handleUserInput(transcript);
+  };
+
+  recognition.onerror = () => {
+    setListening(false);
+    speak("Sorry, I didn't catch that.");
+  };
+
+  recognition.onend = () => {
+    setListening(false);
+  };
+};
 export default App;
