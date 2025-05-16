@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'; import VoiceEnabledHope from './VoiceEnabledHope';
+import React, { useState, useEffect } from 'react'; 
+import VoiceEnabledHope from './VoiceEnabledHope';
 
 const App = () => {
   const [response, setResponse] = useState("Hello, I'm HOPE. What would you like to ask me?");
@@ -65,7 +66,8 @@ const App = () => {
     speak(response);
   }, []);
 
-  return ( <button onClick={startListening} style={styles.listenButton}>
+  return ( 
+    <button onClick={startListening} style={styles.listenButton}>
   {listening ? "Listening..." : "Speak to HOPE"}
 </button>
     <div style={styles.container}>
