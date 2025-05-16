@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; import VoiceEnabledHope from './VoiceEnabledHope';
 
 const App = () => {
   const [response, setResponse] = useState("Hello, I'm HOPE. What would you like to ask me?");
