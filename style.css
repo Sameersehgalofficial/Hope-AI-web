@@ -1,0 +1,130 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#room {
+  background: #fff;
+  width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hope-humanoid {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#head {
+  width: 200px;
+  height: 200px;
+  background: #cfd8dc;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset -5px -5px 10px #b0bec5,
+              inset 5px 5px 10px #eceff1;
+}
+
+.eye {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 70px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+#eye-left {
+  left: 40px;
+}
+
+#eye-right {
+  right: 40px;
+}
+
+.pupil {
+  width: 20px;
+  height: 20px;
+  background: #ff0000; /* signature red lens */
+  border-radius: 50%;
+  position: relative;
+  top: 15px;
+  left: 15px;
+  transition: all 0.3s ease;
+}
+
+#mouth {
+  width: 80px;
+  height: 20px;
+  background: #b71c1c;
+  border-radius: 0 0 40px 40px;
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  transition: background 0.5s ease;
+}
+
+#body {
+  width: 140px;
+  height: 300px;
+  background: #90a4ae;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: inset -5px -5px 10px #78909c,
+              inset 5px 5px 10px #b0bec5;
+}
+
+#controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  background: #00796b;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,121,107,0.5);
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #004d40;
+}
+
+#output {
+  margin-top: 20px;
+  min-height: 80px;
+  width: 90%;
+  background: #e0f2f1;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 18px;
+  color: #004d40;
+  overflow-y: auto;
+}
